@@ -26,7 +26,7 @@ My main apprehension with starter packs is that experience with them is unlikely
 
 ## Implementing CRUD
 
-I find GraphQL especially promising. [Postgres](https://www.postgresql.org/) + [Hasura OSS](https://hasura.io/opensource/) + [React Admin](https://marmelab.com/react-admin/) seems like a great combination. Refer to [React Admin Low Code](https://github.com/cpursley/react-admin-low-code) and [React Admin Hasura Firebase](https://github.com/dvasdekis/react-admin-hasura-firebase). It's also worth looking at [KeystoneJS](https://www.keystonejs.com/).
+I find GraphQL especially promising. [Postgres](https://www.postgresql.org/) + [Hasura OSS](https://hasura.io/opensource/) + [React Admin](https://marmelab.com/react-admin/) seems like a great combination. Refer to [React Admin Low Code](https://github.com/cpursley/react-admin-low-code) and [React Admin Hasura Firebase](https://github.com/dvasdekis/react-admin-hasura-firebase). It's also worth looking at [KeystoneJS](https://www.keystonejs.com/). Make sure to also use code generation in lieu of writing API calls on the client yourself.
 
 Otherwise, Rails and Django seem to have good ecosystems if you're looking for a more traditional approach. They both seem quite good at bridging the gap between the relational database and your object models. You could perhaps even find some way to get a GraphQL API out of them and then use them in combination with React Admin, though they also have their own packages for admin dashboards: Django has an inbuilt solution and Rails has [ActiveAdmin](https://activeadmin.info/).
 
@@ -34,6 +34,18 @@ Otherwise, Rails and Django seem to have good ecosystems if you're looking for a
 
 Some people suggest you should ship your own auth, but I'm not sure I agree. There are many, many ways to accidentally mess up security and at some point you'll probably want SSO or 2FA anyway.
 
-[Firebase Auth](https://firebase.google.com/docs/auth) is free and it seems like a great option though relying on a third party does make me a bit uncomfortable. [Keycloak](https://www.keycloak.org/) is a self-hosted and well supported but allegedly quite difficult to set up. I think I'll also have to take a look at what's available from the Rails ecosystem in terms of self-hosting.
+[Firebase Auth](https://firebase.google.com/docs/auth) is free and it seems like a great option though relying on a third party does make me a bit uncomfortable. [Keycloak](https://www.keycloak.org/) is a self-hosted and well supported but allegedly quite difficult to set up. I think I'll also have to take a look at what's available from the Rails ecosystem in terms of self-hosted auth.
 
+## Tools for an online SaaS business
 
+### Payments
+
+[Stripe](https://stripe.com/) seems like the go-to for this. They've been making it a bit easier to accept payments without making your own customer billing portal: see [Stripe Billing Customer Portal](https://stripe.com/blog/billing-customer-portal) and [Stripe Checkout](https://stripe.com/en-gb-us/payments/checkout).
+
+### Email
+
+Do not try to manage sender reputation yourself and separate transactional email from marketing email. [Postmark](https://postmarkapp.com/) is great for the former and [Mailgun](https://www.mailgun.com/) seems to do both.
+
+### Sites
+
+I'm quite fond of [Umso](https://www.umso.com/) for landing pages and [Hugo](https://gohugo.io/) for other static sites. [Vanta.js](https://www.vantajs.com/) has cute header animations. Beyond that, I'll have to do a bit more research in this area.
