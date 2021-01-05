@@ -20,10 +20,20 @@ Also: [Does it scale? Who cares!](https://jacquesmattheij.com/does-it-scale-who-
 
 ## Starter packs
 
-There are lots of these (see [Rails Jabloon](https://www.getsjabloon.com/pricing) or [Laravel Spark](https://spark.laravel.com/) for example). They mostly focus on online SaaS businesses use cases and try to cover a wide range of problems in that context, though you will have to part with at least about $100 USD. The SaaS service [Outseta](outseta.com) also deserves a mention; it's seems like a really solid product for a new SaaS business.
+There are lots of these (see [Rails Jabloon](https://www.getsjabloon.com/pricing), [Laravel Spark](https://spark.laravel.com/) or [ABP.IO](https://abp.io/) for example). They mostly focus on online SaaS businesses use cases and try to cover a wide range of problems in that context, though you will have to part with at least about $100 USD. The SaaS service [Outseta](outseta.com) also deserves a mention; it's seems like a really solid product for a new SaaS business.
 
 My main apprehension with starter packs is that experience with them is unlikely to translate well to other use cases. They're usually tied to a specific tech stack and as I say they are usually oriented around SaaS businessses. If one needs to, for instance, add auth to a back office application then it doesn't really make sense to reach for Laravel Spark's auth and prior experience with it isn't going to count for much, while experience with Firebase Auth or Keycloak could well come in handy. They also seem to go against the principle of doing one thing and doing it well. Still, if you're committed to the product and the tech stack then it could definitely make sense to use one of these.
 
-## Takeaways
+## Implementing CRUD
+
+I find GraphQL especially promising. [Postgres](https://www.postgresql.org/) + [Hasura OSS](https://hasura.io/opensource/) + [React Admin](https://marmelab.com/react-admin/) seems like a great combination. Refer to [React Admin Low Code](https://github.com/cpursley/react-admin-low-code) and [React Admin Hasura Firebase](https://github.com/dvasdekis/react-admin-hasura-firebase). It's also worth looking at [KeystoneJS](https://www.keystonejs.com/).
+
+Otherwise, Rails and Django seem to have good ecosystems if you're looking for a more traditional approach. They both seem quite good at bridging the gap between the relational database and your object models. You could perhaps even find some way to get a GraphQL API out of them and then use them in combination with React Admin, though they also have their own packages for admin dashboards: Django has an inbuilt solution and Rails has [ActiveAdmin](https://activeadmin.info/).
+
+## Authentication
+
+Some people suggest you should ship your own auth, but I'm not sure I agree. There are many, many ways to accidentally mess up security and at some point you'll probably want SSO or 2FA anyway.
+
+[Firebase Auth](https://firebase.google.com/docs/auth) is free and it seems like a great option though relying on a third party does make me a bit uncomfortable. [Keycloak](https://www.keycloak.org/) is a self-hosted and well supported but allegedly quite difficult to set up. I think I'll also have to take a look at what's available from the Rails ecosystem in terms of self-hosting.
 
 
