@@ -20,7 +20,7 @@ Also: [Does it scale? Who cares!](https://jacquesmattheij.com/does-it-scale-who-
 
 ## Starter packs
 
-There are lots of these (see [Rails Jabloon](https://www.getsjabloon.com/pricing), [Laravel Spark](https://spark.laravel.com/) or [ABP.IO](https://abp.io/) for example). They mostly focus on online SaaS businesses use cases and try to cover a wide range of problems in that context, though you will have to part with at least about $100 USD. The SaaS service [Outseta](outseta.com) also deserves a mention; it's seems like a really solid product for a new SaaS business.
+There are lots of these (see [Rails Sjabloon](https://www.getsjabloon.com/pricing), [Laravel Spark](https://spark.laravel.com/) or [ABP.IO](https://abp.io/) for example). They mostly focus on online SaaS businesses use cases and try to cover a wide range of problems in that context, though you will have to part with at least about $100 USD. The SaaS service [Outseta](outseta.com) also deserves a mention; it's seems like a really solid product for a new SaaS business.
 
 My main apprehension with starter packs is that experience with them is unlikely to translate well to other use cases. They're usually tied to a specific tech stack and as I say they are usually oriented around SaaS businessses. If one needs to, for instance, add auth to a back office application then it doesn't really make sense to reach for Laravel Spark's auth and prior experience with it isn't going to count for much, while experience with Firebase Auth or Keycloak could well come in handy. They also seem to go against the principle of doing one thing and doing it well. Still, if you're committed to the product and the tech stack then it could definitely make sense to use one of these.
 
